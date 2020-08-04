@@ -1,0 +1,307 @@
+{
+  "id": "362b82ef-a492-4536-b7cc-5f75a1d71769",
+  "version": "2.0",
+  "name": "TubesTest",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "8766f884-40fb-428e-9502-d06199de883c",
+    "name": "Register E-Mail, Nama, Password kosong",
+    "commands": [{
+      "id": "3555c616-854f-48e5-8a10-6ac9248a37d7",
+      "comment": "",
+      "command": "open",
+      "target": "/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cb35dc7-9ff5-444c-b0b6-a5affe92bd8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-size--default:nth-child(2)",
+      "targets": [
+        ["css=.v-size--default:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8214c2d7-d310-4cbb-9357-8fcaa22868aa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-input:nth-child(1) .v-messages__message",
+      "targets": [
+        ["css=.v-input:nth-child(1) .v-messages__message", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "The nama field is required."
+    }, {
+      "id": "5ca91753-b921-4c32-97de-be318375a36b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-input:nth-child(2) .v-messages__message",
+      "targets": [
+        ["css=.v-input:nth-child(2) .v-messages__message", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "The email field is required."
+    }, {
+      "id": "c46aa2bb-64eb-47fd-ad9c-46bdd3ac13e4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-input:nth-child(3) .v-messages__message",
+      "targets": [
+        ["css=.v-input:nth-child(3) .v-messages__message", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[3]/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "The password field is required."
+    }]
+  }, {
+    "id": "d5b5f1d8-79ab-4219-8dff-43a32179abe6",
+    "name": "Register E-Mail yang sudah digunakan",
+    "commands": [{
+      "id": "2ad86f02-bc65-418c-89c3-e20be00c59d7",
+      "comment": "",
+      "command": "open",
+      "target": "/register",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40ecf918-c133-4c79-81a6-c1f71f7c1e63",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-24",
+      "targets": [
+        ["id=input-24", "id"],
+        ["css=#input-24", "css:finder"],
+        ["xpath=//input[@id='input-24']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Dzikra Fathin"
+    }, {
+      "id": "fe5e136e-dc6c-42b7-93ae-a0b17359aea7",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-28",
+      "targets": [
+        ["id=input-28", "id"],
+        ["css=#input-28", "css:finder"],
+        ["xpath=//input[@id='input-28']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "dzikrafathin@gmail.com"
+    }, {
+      "id": "3c685bb0-5889-48ea-b49e-f781e8a12a41",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-32",
+      "targets": [
+        ["id=input-32", "id"],
+        ["css=#input-32", "css:finder"],
+        ["xpath=//input[@id='input-32']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[3]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "rahasia"
+    }, {
+      "id": "6a6bda91-86a6-4c20-980d-474d2d52a399",
+      "comment": "",
+      "command": "click",
+      "target": "css=.theme--light > .v-btn__content",
+      "targets": [
+        ["css=.theme--light > .v-btn__content", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f957c63-3aa9-4643-bc05-9dda329a58c6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-messages__message",
+      "targets": [
+        ["css=.v-messages__message", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "The email has already been taken."
+    }]
+  }, {
+    "id": "a47aa2d8-5b13-48c7-8cb5-f882531e0c57",
+    "name": "Login E-Mail, Password kosong",
+    "commands": [{
+      "id": "9b053937-bcff-41c3-8109-f3be23d5bb26",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "def726e9-574a-4ce8-9dba-034c9113e91d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-btn:nth-child(3) > .v-btn__content",
+      "targets": [
+        ["css=.v-btn:nth-child(3) > .v-btn__content", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div[2]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76b5509f-0920-4509-afb3-1dc101753389",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-input:nth-child(1) .v-messages",
+      "targets": [
+        ["css=.v-input:nth-child(1) .v-messages", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "The email field is required."
+    }, {
+      "id": "1147d5a1-884b-4167-bea1-4b8aac24750f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-input:nth-child(2) .v-messages",
+      "targets": [
+        ["css=.v-input:nth-child(2) .v-messages", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[2]/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "The password field is required."
+    }]
+  }, {
+    "id": "0ee4b5f7-2fe3-4344-bd55-2bc74b284036",
+    "name": "Login E-Mail tidak terdaftar",
+    "commands": [{
+      "id": "4e8fe67c-86b3-45ee-9368-4755a25e7921",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f1a6770-cea9-42c1-9013-cb4ddeb79040",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-24",
+      "targets": [
+        ["id=input-24", "id"],
+        ["css=#input-24", "css:finder"],
+        ["xpath=//input[@id='input-24']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "stalin@gmail.com"
+    }, {
+      "id": "9c9cd40b-93ac-4d43-b020-5b0b3dbf5467",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-28",
+      "targets": [
+        ["id=input-28", "id"],
+        ["css=#input-28", "css:finder"],
+        ["xpath=//input[@id='input-28']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "rahasia"
+    }, {
+      "id": "6d007026-d066-4996-9071-a4420bffd8f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-btn:nth-child(3) > .v-btn__content",
+      "targets": [
+        ["css=.v-btn:nth-child(3) > .v-btn__content", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div[2]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f21e1e8-3e65-4b72-93fe-0112879d9a53",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-messages__message",
+      "targets": [
+        ["css=.v-messages__message", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "E-Mail tidak terdaftar"
+    }]
+  }, {
+    "id": "82f1b3cf-8e54-4b89-853a-4d721455d2fe",
+    "name": "Login Password salah",
+    "commands": [{
+      "id": "9762094d-6998-4e92-bdf7-970da20e273d",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b90afd65-7e8b-4114-b855-083945e76c7b",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-24",
+      "targets": [
+        ["id=input-24", "id"],
+        ["css=#input-24", "css:finder"],
+        ["xpath=//input[@id='input-24']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "dzikrafathin@gmail.com"
+    }, {
+      "id": "2e1b22b4-34da-452b-8992-3ab2d73ce081",
+      "comment": "",
+      "command": "type",
+      "target": "id=input-28",
+      "targets": [
+        ["id=input-28", "id"],
+        ["css=#input-28", "css:finder"],
+        ["xpath=//input[@id='input-28']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[2]/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "salah_salah"
+    }, {
+      "id": "c34f3dda-dbae-412c-8bb4-1983e1f1813f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.v-btn:nth-child(3) > .v-btn__content",
+      "targets": [
+        ["css=.v-btn:nth-child(3) > .v-btn__content", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div[2]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1cd9e63-1070-4f7a-bed5-1fcd136174cb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.v-messages__message",
+      "targets": [
+        ["css=.v-messages__message", "css:finder"],
+        ["xpath=//div[@id='app']/div/main/div/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": "Password salah"
+    }]
+  }],
+  "suites": [{
+    "id": "1076bebe-7ea1-47d1-9f66-fd01802ec5bd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8766f884-40fb-428e-9502-d06199de883c"]
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}
